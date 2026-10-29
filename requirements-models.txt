@@ -1,0 +1,15 @@
+# Extra packages for notebooks/01_fit_models.ipynb (on top of requirements-dev.txt)
+scipy
+networkx
+joblib
+matplotlib
+ipython
+jupyter
+xgboost
+lightgbm
+gensim
+node2vec
+torch
+# PyTorch Geometric has its own install instructions that depend on your torch/CUDA version:
+# https://pytorch-geometric.readthedocs.io/en/latest/install/installation.html
+torch_geometric
