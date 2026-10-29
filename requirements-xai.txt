@@ -1,0 +1,21 @@
+# Extra libraries for step 2 (notebooks 02-07). Install after requirements.txt and requirements-models.txt:
+#   pip install -r requirements-xai.txt
+# PyTorch Geometric's explain module needs torch_geometric >= 2.3 (already needed in step 1).
+shap>=0.44
+lime>=0.2.0.1
+captum>=0.7
+# already required by step 1, listed because step 2 reloads those models:
+torch
+torch_geometric
+xgboost
+lightgbm
+gensim
+scikit-learn
+pandas
+numpy
+scipy
+matplotlib
+joblib
+# to run the notebooks
+jupyter
+ipykernel

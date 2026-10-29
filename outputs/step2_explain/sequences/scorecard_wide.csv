@@ -1,0 +1,13 @@
+model,method,correctness_mask_auc,correctness_mask_auc_bot,correctness_mask_auc_troll,correctness_mass_inside,faithfulness,agreement_spearman,agreement_top10,stability_noise,repeatability_seed,seconds_per_explanation
+autoencoder_lstm,GradientSHAP,0.9809,0.9731,0.9887,0.6009,0.8964,,,0.4878,0.4534,0.0051
+autoencoder_lstm,Integrated Gradients,0.9897,0.9857,0.9937,0.7774,0.9804,,,0.6216,1.0,0.0281
+autoencoder_lstm,Integrated Gradients vs GradientSHAP,,,,,,0.4831,0.6667,,,
+cnn1d,Grad-CAM,0.7325,0.4796,0.9853,0.2193,0.3007,,,0.9804,1.0,0.0002
+cnn1d,Grad-CAM vs Integrated Gradients,,,,,,0.1214,0.296,,,
+cnn1d,Integrated Gradients,0.9868,0.9795,0.9941,0.8392,0.8149,,,0.6169,1.0,0.0046
+lstm,GradientSHAP,0.8363,0.8665,0.8061,0.5008,0.4056,,,0.6966,0.6588,0.0022
+lstm,Integrated Gradients,0.9656,0.9772,0.9539,0.75,0.9186,,,0.5097,1.0,0.0142
+lstm,Integrated Gradients vs GradientSHAP,,,,,,0.2951,0.42,,,
+rnn,GradientSHAP,0.6336,0.5923,0.6749,0.3352,0.2235,,,0.9629,0.9659,0.0007
+rnn,Integrated Gradients,0.9427,0.9556,0.9298,0.6002,0.6914,,,0.2055,1.0,0.0044
+rnn,Integrated Gradients vs GradientSHAP,,,,,,0.1631,0.284,,,

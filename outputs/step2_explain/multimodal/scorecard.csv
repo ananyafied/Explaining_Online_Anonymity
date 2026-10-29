@@ -1,0 +1,17 @@
+group,model,method,criterion,value,ci_low,ci_high,n,note
+multimodal,multimodal_fusion,Block Shapley,faithfulness,0.17051335816669302,0.15021710287542805,0.1890668402122595,1011,
+multimodal,multimodal_fusion,Block Shapley,faithfulness_human,0.0947976462362986,0.07637343795179125,0.11297868238881183,686,
+multimodal,multimodal_fusion,Block Shapley,faithfulness_bot,0.27198830094435444,0.22116298635152792,0.31517652956386344,188,
+multimodal,multimodal_fusion,Block Shapley,faithfulness_troll,0.4103943008093954,0.3408115409987586,0.481940725064857,137,
+multimodal,multimodal_fusion,Drop-one ablation,faithfulness,0.22405273053924324,0.20775348854614262,0.24083792247647978,1011,
+multimodal,multimodal_fusion,Drop-one ablation,faithfulness_human,0.14508062823226853,0.13092028325800412,0.16028972903780925,686,
+multimodal,multimodal_fusion,Drop-one ablation,faithfulness_bot,0.346797571361382,0.30521685090999234,0.3863800082295896,188,
+multimodal,multimodal_fusion,Drop-one ablation,faithfulness_troll,0.4510515050503569,0.3843174086589977,0.5225355260162414,137,
+multimodal,multimodal_fusion,Shapley vs ablation,agreement_spearman,0.4579624134520277,0.42136498516320475,0.4940776458951533,1011,
+multimodal,multimodal_fusion,Shapley vs ablation,agreement_top1,0.5509396636993076,0.5192631058358061,0.5816023738872403,1011,
+multimodal,multimodal_fusion,Block Shapley,stability_noise,0.9882229218397421,0.987482411309463,0.9889920675809075,1011,
+multimodal,multimodal_fusion,Block Shapley,repeatability_seed,1.0,,,1,deterministic: exact computation
+multimodal,multimodal_fusion,Block Shapley,seconds_per_explanation,0.0,,,1,8 forward passes for all accounts together
+multimodal,multimodal_fusion,Drop-one ablation,stability_noise,0.9900497006497444,0.9895554978522065,0.9905591238116888,1011,
+multimodal,multimodal_fusion,Drop-one ablation,repeatability_seed,1.0,,,1,deterministic: exact computation
+multimodal,multimodal_fusion,Drop-one ablation,seconds_per_explanation,0.0,,,1,8 forward passes for all accounts together

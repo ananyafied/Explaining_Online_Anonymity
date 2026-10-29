@@ -1,0 +1,58 @@
+group,model,method,criterion,value,ci_low,ci_high,n,note
+post_text,transformer,SHAP,correctness_marker_top1,0.9833333333333333,0.95,1.0,60,chance about 0.11
+post_text,transformer,SHAP,correctness_marker_mass,0.5121187511759996,0.4913959154015568,0.5327215861821974,60,chance = 0.12 (share of the post's words that are markers)
+post_text,transformer,SHAP,shortcut_top1,1.0,1.0,1.0,60,diagnostic: share of decoy-only posts where #trending is the top word
+post_text,transformer,SHAP,shortcut_mass,0.533040859390515,0.5273672450065843,0.5389407675813882,60,diagnostic: share of |credit| given to #trending in decoy-only posts
+post_text,transformer,SHAP,faithfulness,1.0232554732861643,0.9017813054504561,1.1326934287956614,180,
+post_text,transformer,SHAP,seconds_per_explanation,0.026930777231852214,,,1,
+post_text,transformer,LIME,correctness_marker_top1,0.9833333333333333,0.95,1.0,60,chance about 0.11
+post_text,transformer,LIME,correctness_marker_mass,0.7240741503390915,0.6946862642637712,0.7528253646402912,60,chance = 0.12 (share of the post's words that are markers)
+post_text,transformer,LIME,shortcut_top1,1.0,1.0,1.0,60,diagnostic: share of decoy-only posts where #trending is the top word
+post_text,transformer,LIME,shortcut_mass,0.8651114856743412,0.8556524930661208,0.8746191687763915,60,diagnostic: share of |credit| given to #trending in decoy-only posts
+post_text,transformer,LIME,faithfulness,1.0252847831899183,0.9026057836839007,1.1374625226223969,180,
+post_text,transformer,LIME,seconds_per_explanation,0.049773857328626846,,,1,
+post_text,transformer,model (no explainer),shortcut_model_effect,2.253571488459905,2.2097114768624304,2.297529341330131,60,"diagnostic: |score change| when #trending is deleted, in score std units"
+post_text,transformer,SHAP vs LIME,agreement_spearman,0.4795769647690995,0.42772311335476626,0.5311607103949431,180,
+post_text,transformer,SHAP vs LIME,agreement_top3,0.6425925925925925,0.6074074074074075,0.6759722222222221,180,
+post_text,transformer,SHAP,stability_drop_word,0.9512311751111263,0.9332313625825853,0.9675805043905789,60,
+post_text,transformer,SHAP,repeatability_seed,0.9624326599326599,0.9446864367357787,0.9786041777423357,60,
+post_text,transformer,LIME,stability_drop_word,0.7155586080586079,0.6486896645021647,0.7775196262071262,60,
+post_text,transformer,LIME,repeatability_seed,0.8574683649683651,0.8209817890442891,0.8897792693417695,60,
+post_text,word2vec_logreg,SHAP,correctness_marker_top1,0.9,0.8166666666666667,0.9666666666666667,60,chance about 0.11
+post_text,word2vec_logreg,SHAP,correctness_marker_mass,0.3911539010610379,0.36001552809151965,0.42635143046820506,60,chance = 0.12 (share of the post's words that are markers)
+post_text,word2vec_logreg,SHAP,shortcut_top1,1.0,1.0,1.0,60,diagnostic: share of decoy-only posts where #trending is the top word
+post_text,word2vec_logreg,SHAP,shortcut_mass,0.5774458935974637,0.539031235567183,0.6148015757196219,60,diagnostic: share of |credit| given to #trending in decoy-only posts
+post_text,word2vec_logreg,SHAP,faithfulness,0.8630734540643169,0.7206868340342677,1.0179474828050683,180,
+post_text,word2vec_logreg,SHAP,seconds_per_explanation,0.009434016545613606,,,1,
+post_text,word2vec_logreg,LIME,correctness_marker_top1,0.9,0.8166666666666667,0.9666666666666667,60,chance about 0.11
+post_text,word2vec_logreg,LIME,correctness_marker_mass,0.4237788500851707,0.37292390648515844,0.47338022671593327,60,chance = 0.12 (share of the post's words that are markers)
+post_text,word2vec_logreg,LIME,shortcut_top1,1.0,1.0,1.0,60,diagnostic: share of decoy-only posts where #trending is the top word
+post_text,word2vec_logreg,LIME,shortcut_mass,0.7740012500162563,0.7341665991697733,0.8099186347557862,60,diagnostic: share of |credit| given to #trending in decoy-only posts
+post_text,word2vec_logreg,LIME,faithfulness,0.769674958803653,0.6495608513366211,0.9002177868257238,180,
+post_text,word2vec_logreg,LIME,seconds_per_explanation,0.01897539430194431,,,1,
+post_text,word2vec_logreg,model (no explainer),shortcut_model_effect,2.486215987987429,2.338427770594932,2.6150334128249826,60,"diagnostic: |score change| when #trending is deleted, in score std units"
+post_text,word2vec_logreg,SHAP vs LIME,agreement_spearman,0.4980350034154088,0.44482370190791193,0.5503328117171039,180,
+post_text,word2vec_logreg,SHAP vs LIME,agreement_top3,0.5444444444444444,0.5055092592592593,0.587037037037037,180,
+post_text,word2vec_logreg,SHAP,stability_drop_word,0.9655736362240539,0.9424065842760767,0.9830136166502513,60,
+post_text,word2vec_logreg,SHAP,repeatability_seed,0.9798954456849194,0.9681319112174375,0.988907540315435,60,
+post_text,word2vec_logreg,LIME,stability_drop_word,0.8493706293706293,0.7962434232434233,0.8933505106005106,60,
+post_text,word2vec_logreg,LIME,repeatability_seed,0.881450493950494,0.8237483211233212,0.9190572136197137,60,
+post_text,doc2vec_logreg,SHAP,correctness_marker_top1,1.0,1.0,1.0,60,chance about 0.11
+post_text,doc2vec_logreg,SHAP,correctness_marker_mass,0.8400606507015727,0.813791916240342,0.8663556279502724,60,chance = 0.12 (share of the post's words that are markers)
+post_text,doc2vec_logreg,SHAP,shortcut_top1,1.0,1.0,1.0,60,diagnostic: share of decoy-only posts where #trending is the top word
+post_text,doc2vec_logreg,SHAP,shortcut_mass,0.5310461247841255,0.5108282595098781,0.5538682005164067,60,diagnostic: share of |credit| given to #trending in decoy-only posts
+post_text,doc2vec_logreg,SHAP,faithfulness,0.584027282563529,0.44003360845100226,0.7348278154121557,180,
+post_text,doc2vec_logreg,SHAP,seconds_per_explanation,0.11079463826285468,,,1,
+post_text,doc2vec_logreg,LIME,correctness_marker_top1,1.0,1.0,1.0,60,chance about 0.11
+post_text,doc2vec_logreg,LIME,correctness_marker_mass,0.8302038133226957,0.8024358641177771,0.8591203342199248,60,chance = 0.12 (share of the post's words that are markers)
+post_text,doc2vec_logreg,LIME,shortcut_top1,1.0,1.0,1.0,60,diagnostic: share of decoy-only posts where #trending is the top word
+post_text,doc2vec_logreg,LIME,shortcut_mass,0.5617440692213397,0.533134755770284,0.5895986889847771,60,diagnostic: share of |credit| given to #trending in decoy-only posts
+post_text,doc2vec_logreg,LIME,faithfulness,0.5266109486102231,0.38451742721272564,0.6699879370050243,180,
+post_text,doc2vec_logreg,LIME,seconds_per_explanation,0.1844062950876024,,,1,
+post_text,doc2vec_logreg,model (no explainer),shortcut_model_effect,0.8338422628766092,0.6487243465335576,1.015521510643703,60,"diagnostic: |score change| when #trending is deleted, in score std units"
+post_text,doc2vec_logreg,SHAP vs LIME,agreement_spearman,0.409796269559659,0.3623818872983548,0.4555832485520028,180,
+post_text,doc2vec_logreg,SHAP vs LIME,agreement_top3,0.5833333333333334,0.5518055555555554,0.6130092592592593,180,
+post_text,doc2vec_logreg,SHAP,stability_drop_word,0.5471021362115338,0.4814889388789991,0.6094457510306761,60,
+post_text,doc2vec_logreg,SHAP,repeatability_seed,0.5713019872637037,0.49567066181868824,0.6411854873927242,60,
+post_text,doc2vec_logreg,LIME,stability_drop_word,0.7018967143967143,0.6433092324342325,0.7570994352869352,60,
+post_text,doc2vec_logreg,LIME,repeatability_seed,0.7336885336885338,0.6767453171828172,0.7864871725496725,60,

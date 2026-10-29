@@ -1,0 +1,12 @@
+{
+  "seed": 0,
+  "quick": false,
+  "n_per_stratum": 60,
+  "shap_nsamples": 1000,
+  "lime_nsamples": 1000,
+  "ks": [
+    1,
+    2,
+    3
+  ]
+}

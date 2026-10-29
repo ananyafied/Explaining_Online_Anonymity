@@ -1,0 +1,73 @@
+group,model,method,criterion,value,ci_low,ci_high,n,note
+timeline,cnn1d,Grad-CAM,correctness_mask_auc,0.7324542303774163,0.67932255917308,0.7839321462553676,100,chance = 0.5
+timeline,cnn1d,Grad-CAM,correctness_mask_auc_bot,0.47962039491121133,0.45570706325279026,0.5033473029309127,50,chance = 0.5
+timeline,cnn1d,Grad-CAM,correctness_mask_auc_troll,0.9852880658436214,0.9804526748971195,0.9892803497942387,50,chance = 0.5
+timeline,cnn1d,Grad-CAM,correctness_mass_inside,0.219342992156744,0.19598628441989424,0.2430490948781371,100,chance = 0.082 (share of hours planted)
+timeline,cnn1d,Grad-CAM,faithfulness,0.3006854282761791,0.24892871062415323,0.3543438564065884,150,
+timeline,cnn1d,Grad-CAM,seconds_per_explanation,0.00023049195607503255,,,1,
+timeline,cnn1d,Integrated Gradients,correctness_mask_auc,0.9868212372620545,0.9828016335024037,0.9905728037399031,100,chance = 0.5
+timeline,cnn1d,Integrated Gradients,correctness_mask_auc_bot,0.9795036516771212,0.9738949547405541,0.9850479938782872,50,chance = 0.5
+timeline,cnn1d,Integrated Gradients,correctness_mask_auc_troll,0.9941388228469878,0.9888159633743008,0.9978034081469535,50,chance = 0.5
+timeline,cnn1d,Integrated Gradients,correctness_mass_inside,0.8391503135859967,0.8071382837854325,0.8671867940351367,100,chance = 0.082 (share of hours planted)
+timeline,cnn1d,Integrated Gradients,faithfulness,0.8148642140997742,0.7024849653598132,0.9282544331574547,150,
+timeline,cnn1d,Integrated Gradients,seconds_per_explanation,0.004575007756551106,,,1,
+timeline,cnn1d,Grad-CAM vs Integrated Gradients,agreement_spearman,0.12143640300373643,0.09666030691180422,0.14540100329489827,122,
+timeline,cnn1d,Grad-CAM vs Integrated Gradients,agreement_top10,0.29600000000000004,0.26133333333333336,0.33205,150,
+timeline,cnn1d,Grad-CAM,stability_noise,0.9803556585503012,0.9653686959709921,0.9915441318704106,47,
+timeline,cnn1d,Grad-CAM,repeatability_seed,1.0,1.0,1.0,49,1.0 expected for deterministic methods
+timeline,cnn1d,Integrated Gradients,stability_noise,0.6168965921586608,0.5742185707326248,0.6567873992140169,60,
+timeline,cnn1d,Integrated Gradients,repeatability_seed,1.0,1.0,1.0,60,1.0 expected for deterministic methods
+timeline,rnn,Integrated Gradients,correctness_mask_auc,0.9426904919421162,0.929512343089667,0.954278458534566,100,chance = 0.5
+timeline,rnn,Integrated Gradients,correctness_mask_auc_bot,0.9555701328150309,0.9460716679366552,0.9640786816782989,50,chance = 0.5
+timeline,rnn,Integrated Gradients,correctness_mask_auc_troll,0.9298108510692015,0.9032690196672474,0.9513356415208665,50,chance = 0.5
+timeline,rnn,Integrated Gradients,correctness_mass_inside,0.6002277408321484,0.5205353954612174,0.6816631907565938,100,chance = 0.082 (share of hours planted)
+timeline,rnn,Integrated Gradients,faithfulness,0.6914476096401279,0.6123360457978988,0.7819092524962132,150,
+timeline,rnn,Integrated Gradients,seconds_per_explanation,0.004364898999532064,,,1,
+timeline,rnn,GradientSHAP,correctness_mask_auc,0.6335787499615996,0.6068965829451531,0.6609014513488,100,chance = 0.5
+timeline,rnn,GradientSHAP,correctness_mask_auc_bot,0.5923058500456461,0.5823141916615131,0.6041067121653857,50,chance = 0.5
+timeline,rnn,GradientSHAP,correctness_mask_auc_troll,0.6748516498775531,0.6214159136812341,0.7297849049458457,50,chance = 0.5
+timeline,rnn,GradientSHAP,correctness_mass_inside,0.33517552294290076,0.27837817337323356,0.39286728827986267,100,chance = 0.082 (share of hours planted)
+timeline,rnn,GradientSHAP,faithfulness,0.2235492730755684,0.16325400331246245,0.2915472842440049,150,
+timeline,rnn,GradientSHAP,seconds_per_explanation,0.0006510273615519205,,,1,
+timeline,rnn,Integrated Gradients vs GradientSHAP,agreement_spearman,0.16305368375011647,0.1465361491125863,0.17948654034937578,150,
+timeline,rnn,Integrated Gradients vs GradientSHAP,agreement_top10,0.284,0.2513166666666667,0.316,150,
+timeline,rnn,Integrated Gradients,stability_noise,0.20546797053294266,0.17389008830331273,0.23530759086035746,60,
+timeline,rnn,Integrated Gradients,repeatability_seed,1.0,1.0,1.0,60,1.0 expected for deterministic methods
+timeline,rnn,GradientSHAP,stability_noise,0.9629343595142769,0.951468530605737,0.9718450419532872,60,
+timeline,rnn,GradientSHAP,repeatability_seed,0.9658907037995017,0.9552199204718209,0.9742780151868707,60,1.0 expected for deterministic methods
+timeline,lstm,Integrated Gradients,correctness_mask_auc,0.9655554231805535,0.9543950883986076,0.974626719560702,100,chance = 0.5
+timeline,lstm,Integrated Gradients,correctness_mask_auc_bot,0.9772093088317577,0.9710502844590216,0.9830144864276881,50,chance = 0.5
+timeline,lstm,Integrated Gradients,correctness_mask_auc_troll,0.9539015375293495,0.9315779254714838,0.9710574149814436,50,chance = 0.5
+timeline,lstm,Integrated Gradients,correctness_mass_inside,0.7499967336910777,0.6831939817508973,0.8142516064559749,100,chance = 0.082 (share of hours planted)
+timeline,lstm,Integrated Gradients,faithfulness,0.9186179984246964,0.8037805978773299,1.0355896403314224,150,
+timeline,lstm,Integrated Gradients,seconds_per_explanation,0.014179321924845377,,,1,
+timeline,lstm,GradientSHAP,correctness_mask_auc,0.8363035644862066,0.8139127586941917,0.8595310934837196,100,chance = 0.5
+timeline,lstm,GradientSHAP,correctness_mask_auc_bot,0.8664582486674323,0.8481572794269224,0.8833155227567218,50,chance = 0.5
+timeline,lstm,GradientSHAP,correctness_mask_auc_troll,0.8061488803049811,0.7614611609735161,0.8481040943977382,50,chance = 0.5
+timeline,lstm,GradientSHAP,correctness_mass_inside,0.5007708127301885,0.4421712502308837,0.5639895626830148,100,chance = 0.082 (share of hours planted)
+timeline,lstm,GradientSHAP,faithfulness,0.40560389382443596,0.310459941300476,0.5113119084442354,150,
+timeline,lstm,GradientSHAP,seconds_per_explanation,0.0022440528869628906,,,1,
+timeline,lstm,Integrated Gradients vs GradientSHAP,agreement_spearman,0.29506804089400057,0.26907881511982185,0.3221167244244194,150,
+timeline,lstm,Integrated Gradients vs GradientSHAP,agreement_top10,0.41999999999999993,0.37533333333333335,0.466,150,
+timeline,lstm,Integrated Gradients,stability_noise,0.5096527871187507,0.456498223301964,0.5565154099619012,60,
+timeline,lstm,Integrated Gradients,repeatability_seed,1.0,1.0,1.0,60,1.0 expected for deterministic methods
+timeline,lstm,GradientSHAP,stability_noise,0.6966197360140244,0.6585589609032149,0.7325765333238847,60,
+timeline,lstm,GradientSHAP,repeatability_seed,0.6587971985024036,0.6185051231012196,0.6953236468736238,60,1.0 expected for deterministic methods
+timeline,autoencoder_lstm,Integrated Gradients,correctness_mask_auc,0.9896891747630866,0.9858085364699136,0.993249143036022,100,chance = 0.5
+timeline,autoencoder_lstm,Integrated Gradients,correctness_mask_auc_bot,0.9856604823747682,0.9802702795079071,0.9905687815656565,50,chance = 0.5
+timeline,autoencoder_lstm,Integrated Gradients,correctness_mask_auc_troll,0.993717867151405,0.9883459535711581,0.9979724052614304,50,chance = 0.5
+timeline,autoencoder_lstm,Integrated Gradients,correctness_mass_inside,0.7774021664261818,0.7414988349676133,0.8124979266487061,100,chance = 0.082 (share of hours planted)
+timeline,autoencoder_lstm,Integrated Gradients,faithfulness,0.9803563181841817,0.8878711671299204,1.070734984449111,150,
+timeline,autoencoder_lstm,Integrated Gradients,seconds_per_explanation,0.028114986419677735,,,1,
+timeline,autoencoder_lstm,GradientSHAP,correctness_mask_auc,0.9808957371502166,0.9754727693159594,0.9858433826898158,100,chance = 0.5
+timeline,autoencoder_lstm,GradientSHAP,correctness_mask_auc_bot,0.9730992578849721,0.9647823028020731,0.9804347732058192,50,chance = 0.5
+timeline,autoencoder_lstm,GradientSHAP,correctness_mask_auc_troll,0.9886922164154612,0.981826264864046,0.9940909730111843,50,chance = 0.5
+timeline,autoencoder_lstm,GradientSHAP,correctness_mass_inside,0.600887153595686,0.5652938810028136,0.635336676068604,100,chance = 0.082 (share of hours planted)
+timeline,autoencoder_lstm,GradientSHAP,faithfulness,0.8964421416892594,0.8000816192900608,0.9941906073563677,150,
+timeline,autoencoder_lstm,GradientSHAP,seconds_per_explanation,0.0050597111384073894,,,1,
+timeline,autoencoder_lstm,Integrated Gradients vs GradientSHAP,agreement_spearman,0.48305311456092187,0.45951750566196,0.5077016065510752,150,
+timeline,autoencoder_lstm,Integrated Gradients vs GradientSHAP,agreement_top10,0.6666666666666666,0.6186,0.7153333333333333,150,
+timeline,autoencoder_lstm,Integrated Gradients,stability_noise,0.6216494659535062,0.5794245149580085,0.6597698526273379,60,
+timeline,autoencoder_lstm,Integrated Gradients,repeatability_seed,1.0,1.0,1.0,60,1.0 expected for deterministic methods
+timeline,autoencoder_lstm,GradientSHAP,stability_noise,0.487828822490269,0.45750606669163807,0.5205973745661678,60,
+timeline,autoencoder_lstm,GradientSHAP,repeatability_seed,0.4533864224214294,0.40658705834316167,0.49634893568737426,60,1.0 expected for deterministic methods

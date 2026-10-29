@@ -1,0 +1,1843 @@
+{
+  "baseline_all_authentic": {
+    "row": 0,
+    "family": "Baseline",
+    "unit": "account",
+    "supervised": false,
+    "score_type": "probability",
+    "input_view": "none",
+    "hyperparams": {},
+    "train_seconds": 0.0,
+    "threshold": 0.5,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.5,
+        "pr_auc": 0.29608753315649866,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "balanced_accuracy": 0.5,
+        "accuracy": 0.7039124668435013,
+        "log_loss": 4.090601144318023,
+        "brier": 0.2960869409824323
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.5,
+        "pr_auc": 0.30729701952723537,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "balanced_accuracy": 0.5,
+        "accuracy": 0.6927029804727647,
+        "log_loss": 4.2454659104128005,
+        "brier": 0.30729640493419624
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.5,
+        "pr_auc": 0.32146389713155293,
+        "f1": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "balanced_accuracy": 0.5,
+        "accuracy": 0.6785361028684471,
+        "log_loss": 4.4411885433617515,
+        "brier": 0.32146325420475863
+      }
+    },
+    "test_auc_ci": [
+      0.5,
+      0.5
+    ],
+    "artifact": null,
+    "notes": "Predicts 'authentic' for everyone; its accuracy is the share of authentic accounts."
+  },
+  "rf": {
+    "row": 6,
+    "family": "Supervised classification",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "12 profile stats (raw)",
+    "hyperparams": {
+      "n_estimators": 500,
+      "min_samples_leaf": 3,
+      "max_features": "sqrt"
+    },
+    "train_seconds": 0.5,
+    "threshold": 0.3746728831168831,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.9979987752124521,
+        "pr_auc": 0.9954003287888785,
+        "f1": 0.9538795442213782,
+        "precision": 0.9252631578947368,
+        "recall": 0.9843225083986562,
+        "balanced_accuracy": 0.9754396338507647,
+        "accuracy": 0.971816976127321,
+        "log_loss": 0.20586911199085003,
+        "brier": 0.049354217793359405
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.8460248305429573,
+        "pr_auc": 0.7247557903424158,
+        "f1": 0.6848,
+        "precision": 0.656441717791411,
+        "recall": 0.7157190635451505,
+        "balanced_accuracy": 0.7747734783601123,
+        "accuracy": 0.7975334018499486,
+        "log_loss": 0.43783922639971934,
+        "brier": 0.1416841494772381
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.8289840771473426,
+        "pr_auc": 0.6799152927716082,
+        "f1": 0.6637298091042585,
+        "precision": 0.6348314606741573,
+        "recall": 0.6953846153846154,
+        "balanced_accuracy": 0.7529401211033864,
+        "accuracy": 0.7734915924826904,
+        "log_loss": 0.4681833001659824,
+        "brier": 0.1542151297964305
+      }
+    },
+    "test_auc_ci": [
+      0.8021946945657394,
+      0.8533770888782435
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/rf.joblib",
+    "notes": ""
+  },
+  "xgboost": {
+    "row": 7,
+    "family": "Supervised classification",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "12 profile stats (raw)",
+    "hyperparams": {
+      "n_estimators": 500,
+      "max_depth": 4,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "early_stopping_rounds": 30
+    },
+    "train_seconds": 0.1,
+    "threshold": 0.3755578124523163,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.952593020820861,
+        "pr_auc": 0.907643665522915,
+        "f1": 0.8204301075268817,
+        "precision": 0.7890382626680456,
+        "recall": 0.8544232922732363,
+        "balanced_accuracy": 0.8791664271069431,
+        "accuracy": 0.8892572944297082,
+        "log_loss": 0.2844290668812473,
+        "brier": 0.08399422714543983
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.8493345771761459,
+        "pr_auc": 0.737106993668838,
+        "f1": 0.688,
+        "precision": 0.6595092024539877,
+        "recall": 0.7190635451505016,
+        "balanced_accuracy": 0.7771875589253991,
+        "accuracy": 0.7995889003083247,
+        "log_loss": 0.43283692653469363,
+        "brier": 0.1401540959147638
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.8437990580847723,
+        "pr_auc": 0.726477141646861,
+        "f1": 0.664714494875549,
+        "precision": 0.6340782122905028,
+        "recall": 0.6984615384615385,
+        "balanced_accuracy": 0.753749719668087,
+        "accuracy": 0.7734915924826904,
+        "log_loss": 0.44948997766122134,
+        "brier": 0.1474961899984512
+      }
+    },
+    "test_auc_ci": [
+      0.8177554389268837,
+      0.8676301060620768
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/xgboost.joblib",
+    "notes": "best_iteration=181"
+  },
+  "lightgbm": {
+    "row": 7,
+    "family": "Supervised classification",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "12 profile stats (raw)",
+    "hyperparams": {
+      "n_estimators": 500,
+      "num_leaves": 15,
+      "learning_rate": 0.05,
+      "subsample": 0.8,
+      "subsample_freq": 1,
+      "colsample_bytree": 0.8,
+      "early_stopping_rounds": 30
+    },
+    "train_seconds": 0.2,
+    "threshold": 0.3236303498157144,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.9395338950195665,
+        "pr_auc": 0.8791275480379562,
+        "f1": 0.7893413775766717,
+        "precision": 0.7162408759124088,
+        "recall": 0.8790593505039194,
+        "balanced_accuracy": 0.8662842678096611,
+        "accuracy": 0.8610742705570292,
+        "log_loss": 0.3151489250087441,
+        "brier": 0.09453604052584984
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.852068715699215,
+        "pr_auc": 0.7391450073926279,
+        "f1": 0.6819571865443425,
+        "precision": 0.6281690140845071,
+        "recall": 0.745819397993311,
+        "balanced_accuracy": 0.774986850331967,
+        "accuracy": 0.7862281603288798,
+        "log_loss": 0.42928616544354486,
+        "brier": 0.13863735030516933
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.8426463332585782,
+        "pr_auc": 0.7201171483427928,
+        "f1": 0.6685236768802229,
+        "precision": 0.6106870229007634,
+        "recall": 0.7384615384615385,
+        "balanced_accuracy": 0.7577147342453465,
+        "accuracy": 0.7645895153313551,
+        "log_loss": 0.45008982852674717,
+        "brier": 0.1475560221848926
+      }
+    },
+    "test_auc_ci": [
+      0.8163954480191167,
+      0.8653189872291627
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/lightgbm.joblib",
+    "notes": "best_iteration=88"
+  },
+  "svm_rbf": {
+    "row": 8,
+    "family": "Supervised classification",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "12 profile stats (standardised in pipeline)",
+    "hyperparams": {
+      "kernel": "rbf",
+      "C": 1.0,
+      "gamma": "scale"
+    },
+    "train_seconds": 0.4,
+    "threshold": 0.24979789118229231,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.8998865409984708,
+        "pr_auc": 0.8189450905386388,
+        "f1": 0.741439205955335,
+        "precision": 0.6657754010695187,
+        "recall": 0.8365061590145577,
+        "balanced_accuracy": 0.8299346621733175,
+        "accuracy": 0.8272546419098143,
+        "log_loss": 0.3601663450838531,
+        "brier": 0.10994706349408905
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.8424669769657513,
+        "pr_auc": 0.7412668091466519,
+        "f1": 0.662873399715505,
+        "precision": 0.5767326732673267,
+        "recall": 0.7792642140468228,
+        "balanced_accuracy": 0.7627775076168832,
+        "accuracy": 0.7564234326824255,
+        "log_loss": 0.4364708718749026,
+        "brier": 0.14071273573528228
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.8224669208342676,
+        "pr_auc": 0.689318641190654,
+        "f1": 0.6586985391766268,
+        "precision": 0.5794392523364486,
+        "recall": 0.7630769230769231,
+        "balanced_accuracy": 0.7503431262614937,
+        "accuracy": 0.7457962413452027,
+        "log_loss": 0.4805799823826785,
+        "brier": 0.15821325989405402
+      }
+    },
+    "test_auc_ci": [
+      0.7956825563007012,
+      0.8469201329657872
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/svm_rbf.joblib",
+    "notes": "Probabilities come from Platt scaling."
+  },
+  "svm_linear": {
+    "row": 8,
+    "family": "Supervised classification",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "12 profile stats (standardised in pipeline)",
+    "hyperparams": {
+      "kernel": "linear",
+      "C": 1.0,
+      "gamma": "scale"
+    },
+    "train_seconds": 0.5,
+    "threshold": 0.3008222120778389,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.8436417860377384,
+        "pr_auc": 0.6894840434210976,
+        "f1": 0.6499508357915438,
+        "precision": 0.5793163891323401,
+        "recall": 0.7402015677491601,
+        "balanced_accuracy": 0.7570532096871094,
+        "accuracy": 0.7639257294429708,
+        "log_loss": 0.45213305264865405,
+        "brier": 0.14305642522871934
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.8365868423925448,
+        "pr_auc": 0.6857875421209877,
+        "f1": 0.664714494875549,
+        "precision": 0.5911458333333334,
+        "recall": 0.7591973244147158,
+        "balanced_accuracy": 0.7631298194773876,
+        "accuracy": 0.7646454265159301,
+        "log_loss": 0.47890561269708554,
+        "brier": 0.14677965414211983
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.8220296030500112,
+        "pr_auc": 0.6782802528898854,
+        "f1": 0.6515353805073432,
+        "precision": 0.5754716981132075,
+        "recall": 0.7507692307692307,
+        "balanced_accuracy": 0.7441892801076475,
+        "accuracy": 0.7418397626112759,
+        "log_loss": 0.47734688374677625,
+        "brier": 0.15817199518346
+      }
+    },
+    "test_auc_ci": [
+      0.7961168360054215,
+      0.8466384482846919
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/svm_linear.joblib",
+    "notes": "Probabilities come from Platt scaling."
+  },
+  "cnn1d": {
+    "row": 9,
+    "family": "Deep learning",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "168 hourly post counts (log1p, standardised)",
+    "hyperparams": {
+      "arch": "cnn",
+      "lr": 0.001,
+      "batch_size": 128,
+      "epochs_run": 40,
+      "best_epoch": 39,
+      "best_val_loss": 0.045
+    },
+    "train_seconds": 12.9,
+    "threshold": 0.5653228092193632,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.9991681783105,
+        "pr_auc": 0.9977163229879461,
+        "f1": 0.9773755656108597,
+        "precision": 0.9874285714285714,
+        "recall": 0.9675251959686451,
+        "balanced_accuracy": 0.981171924409193,
+        "accuracy": 0.986737400530504,
+        "log_loss": 0.0414031573980853,
+        "brier": 0.008873435077511605
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.9990720800293759,
+        "pr_auc": 0.9978254392312678,
+        "f1": 0.9832214765100671,
+        "precision": 0.9865319865319865,
+        "recall": 0.979933110367893,
+        "balanced_accuracy": 0.9869991961335014,
+        "accuracy": 0.9897225077081192,
+        "log_loss": 0.04504805494933836,
+        "brier": 0.01039887821702861
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.9995559542498318,
+        "pr_auc": 0.9990519196226849,
+        "f1": 0.9765258215962441,
+        "precision": 0.9936305732484076,
+        "recall": 0.96,
+        "balanced_accuracy": 0.9785422740524781,
+        "accuracy": 0.9851632047477745,
+        "log_loss": 0.03950564502999628,
+        "brier": 0.00908246331391413
+      }
+    },
+    "test_auc_ci": [
+      0.9990759396172537,
+      0.9999039803375306
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/cnn1d.pt",
+    "notes": ""
+  },
+  "rnn": {
+    "row": 9,
+    "family": "Deep learning",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "168 hourly post counts (log1p, standardised)",
+    "hyperparams": {
+      "arch": "rnn",
+      "lr": 0.001,
+      "batch_size": 128,
+      "epochs_run": 15,
+      "best_epoch": 7,
+      "best_val_loss": 0.3706
+    },
+    "train_seconds": 3.5,
+    "threshold": 0.1362159746885307,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.8853394196448117,
+        "pr_auc": 0.6617014745049319,
+        "f1": 0.7763280521901211,
+        "precision": 0.664804469273743,
+        "recall": 0.9328107502799552,
+        "balanced_accuracy": 0.8674887477259409,
+        "accuracy": 0.8408488063660478,
+        "log_loss": 0.36113446861054393,
+        "brier": 0.11396632395113647
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.8902226015501722,
+        "pr_auc": 0.7032730935515369,
+        "f1": 0.7795163584637269,
+        "precision": 0.6782178217821783,
+        "recall": 0.9163879598662207,
+        "balanced_accuracy": 0.8617548107936445,
+        "accuracy": 0.8406988694758479,
+        "log_loss": 0.370575309074829,
+        "brier": 0.1165378100788081
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.8862211258129626,
+        "pr_auc": 0.6762247789059537,
+        "f1": 0.7947368421052632,
+        "precision": 0.6942528735632184,
+        "recall": 0.9292307692307692,
+        "balanced_accuracy": 0.8676766091051805,
+        "accuracy": 0.8456973293768546,
+        "log_loss": 0.3679731474735443,
+        "brier": 0.11601174448601874
+      }
+    },
+    "test_auc_ci": [
+      0.8681311633547272,
+      0.9060841375758952
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/rnn.pt",
+    "notes": ""
+  },
+  "lstm": {
+    "row": 9,
+    "family": "Deep learning",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "168 hourly post counts (log1p, standardised)",
+    "hyperparams": {
+      "arch": "lstm",
+      "lr": 0.001,
+      "batch_size": 128,
+      "epochs_run": 38,
+      "best_epoch": 30,
+      "best_val_loss": 0.0289
+    },
+    "train_seconds": 26.0,
+    "threshold": 0.2930470901727695,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.9997125283317835,
+        "pr_auc": 0.9993413487106617,
+        "f1": 0.9795918367346939,
+        "precision": 0.9652173913043478,
+        "recall": 0.9944008958566629,
+        "balanced_accuracy": 0.9896639429825,
+        "accuracy": 0.9877320954907162,
+        "log_loss": 0.030491095004327867,
+        "brier": 0.006523454446799153
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.999637763861735,
+        "pr_auc": 0.9991521155178533,
+        "f1": 0.9867986798679867,
+        "precision": 0.9739413680781759,
+        "recall": 1.0,
+        "balanced_accuracy": 0.9940652818991098,
+        "accuracy": 0.9917780061664954,
+        "log_loss": 0.02887376214442169,
+        "brier": 0.0058314684195521285
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.9996591163938102,
+        "pr_auc": 0.9993480051062055,
+        "f1": 0.9847560975609756,
+        "precision": 0.9758308157099698,
+        "recall": 0.9938461538461538,
+        "balanced_accuracy": 0.9910921731329895,
+        "accuracy": 0.990108803165183,
+        "log_loss": 0.030179819668139242,
+        "brier": 0.0055680829696123065
+      }
+    },
+    "test_auc_ci": [
+      0.9991003421421998,
+      0.9999776640888641
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/lstm.pt",
+    "notes": ""
+  },
+  "transformer": {
+    "row": 10,
+    "family": "Deep learning",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "post text (whitespace tokens, vocabulary from train)",
+    "hyperparams": {
+      "d_model": 64,
+      "nhead": 4,
+      "n_layers": 2,
+      "d_ff": 128,
+      "lr": 0.001,
+      "batch_size": 256,
+      "epochs_run": 14,
+      "best_epoch": 6,
+      "best_val_loss": 0.377
+    },
+    "train_seconds": 38.6,
+    "threshold": 0.39786796569824223,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.9985325758147183,
+        "pr_auc": 0.9969062551225363,
+        "f1": 0.9729425028184893,
+        "precision": 0.9795686719636776,
+        "recall": 0.9664053751399776,
+        "balanced_accuracy": 0.9789634035379586,
+        "accuracy": 0.9840848806366048,
+        "log_loss": 0.2661688061132885,
+        "brier": 0.06632113404379353
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.9978613181425722,
+        "pr_auc": 0.9955701958575558,
+        "f1": 0.9678510998307953,
+        "precision": 0.9794520547945206,
+        "recall": 0.9565217391304348,
+        "balanced_accuracy": 0.9738098309895498,
+        "accuracy": 0.9804727646454265,
+        "log_loss": 0.27700659248449844,
+        "brier": 0.07036076060440194
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.8727293115048218,
+        "pr_auc": 0.8126149727818193,
+        "f1": 0.5,
+        "precision": 0.9327731092436975,
+        "recall": 0.3415384615384615,
+        "balanced_accuracy": 0.6649383269791433,
+        "accuracy": 0.7804154302670623,
+        "log_loss": 0.49686435938752965,
+        "brier": 0.16633885180259136
+      }
+    },
+    "test_auc_ci": [
+      0.8466252147637945,
+      0.8973154185024891
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/transformer.pt",
+    "notes": "Trained from scratch (no pretrained weights). Account score = mean of 6 post probabilities."
+  },
+  "gcn": {
+    "row": 12,
+    "family": "Deep learning",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "12 standardised profile stats as node features + undirected interaction graph",
+    "hyperparams": {
+      "kind": "gcn",
+      "hidden": 64,
+      "dropout": 0.3,
+      "lr": 0.01,
+      "epochs_run": 139,
+      "best_epoch": 119,
+      "best_val_loss": 0.2355
+    },
+    "train_seconds": 3.1,
+    "threshold": 0.4131685221195222,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.9682900288473862,
+        "pr_auc": 0.9350915076914684,
+        "f1": 0.8634850166481687,
+        "precision": 0.8558855885588559,
+        "recall": 0.8712206047032475,
+        "balanced_accuracy": 0.9047577352296265,
+        "accuracy": 0.9184350132625995,
+        "log_loss": 0.21380816058321767,
+        "brier": 0.061784615372490526
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.9626648670642994,
+        "pr_auc": 0.9267407159185322,
+        "f1": 0.848585690515807,
+        "precision": 0.8443708609271523,
+        "recall": 0.8528428093645485,
+        "balanced_accuracy": 0.8915549358395443,
+        "accuracy": 0.9064748201438849,
+        "log_loss": 0.23549272276606897,
+        "brier": 0.07172947721407108
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.9645256784032293,
+        "pr_auc": 0.9342551994259881,
+        "f1": 0.8513931888544891,
+        "precision": 0.8566978193146417,
+        "recall": 0.8461538461538461,
+        "balanced_accuracy": 0.8895492262839202,
+        "accuracy": 0.9050445103857567,
+        "log_loss": 0.23196181757244977,
+        "brier": 0.06968237767356927
+      }
+    },
+    "test_auc_ci": [
+      0.9526322048165055,
+      0.9742214893613786
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/gcn.pt",
+    "notes": "Transductive; train labels only."
+  },
+  "gat": {
+    "row": 12,
+    "family": "Deep learning",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "12 standardised profile stats as node features + undirected interaction graph",
+    "hyperparams": {
+      "kind": "gat",
+      "hidden": 64,
+      "dropout": 0.3,
+      "lr": 0.01,
+      "epochs_run": 200,
+      "best_epoch": 196,
+      "best_val_loss": 0.2923
+    },
+    "train_seconds": 6.9,
+    "threshold": 0.4012527525424958,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.966630605235993,
+        "pr_auc": 0.9219790861452913,
+        "f1": 0.8556206712839638,
+        "precision": 0.8160569105691057,
+        "recall": 0.8992161254199328,
+        "balanced_accuracy": 0.9069797066101077,
+        "accuracy": 0.9101458885941645,
+        "log_loss": 0.23761400518568593,
+        "brier": 0.06910630404297304
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.9414467612119528,
+        "pr_auc": 0.8765850890399907,
+        "f1": 0.7967741935483871,
+        "precision": 0.7694704049844237,
+        "recall": 0.8260869565217391,
+        "balanced_accuracy": 0.8581473358276351,
+        "accuracy": 0.8705035971223022,
+        "log_loss": 0.2923003336524215,
+        "brier": 0.09159816628727677
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.9485265754653509,
+        "pr_auc": 0.8915772298940735,
+        "f1": 0.8272727272727273,
+        "precision": 0.8149253731343283,
+        "recall": 0.84,
+        "balanced_accuracy": 0.8748104956268221,
+        "accuracy": 0.887240356083086,
+        "log_loss": 0.2845694544452172,
+        "brier": 0.08604724976827981
+      }
+    },
+    "test_auc_ci": [
+      0.9345851105372635,
+      0.9609089931103418
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/gat.pt",
+    "notes": "Transductive; train labels only."
+  },
+  "graphsage": {
+    "row": 12,
+    "family": "Deep learning",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "12 standardised profile stats as node features + undirected interaction graph",
+    "hyperparams": {
+      "kind": "sage",
+      "hidden": 64,
+      "dropout": 0.3,
+      "lr": 0.01,
+      "epochs_run": 122,
+      "best_epoch": 102,
+      "best_val_loss": 0.3041
+    },
+    "train_seconds": 1.5,
+    "threshold": 0.380704912543297,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.9696952114604669,
+        "pr_auc": 0.9327619750228536,
+        "f1": 0.8571428571428571,
+        "precision": 0.8045186640471512,
+        "recall": 0.9171332586786114,
+        "balanced_accuracy": 0.9116989892074169,
+        "accuracy": 0.9094827586206896,
+        "log_loss": 0.23307934006114597,
+        "brier": 0.0676664054528516
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.93417226561337,
+        "pr_auc": 0.8539286302726752,
+        "f1": 0.7906976744186046,
+        "precision": 0.7369942196531792,
+        "recall": 0.8528428093645485,
+        "balanced_accuracy": 0.8589139862846481,
+        "accuracy": 0.8612538540596094,
+        "log_loss": 0.30411281950202285,
+        "brier": 0.09597731416954915
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.9324108544516707,
+        "pr_auc": 0.8690070043602817,
+        "f1": 0.7930535455861071,
+        "precision": 0.7486338797814208,
+        "recall": 0.8430769230769231,
+        "balanced_accuracy": 0.8544830679524558,
+        "accuracy": 0.8585558852621167,
+        "log_loss": 0.3133216321441165,
+        "brier": 0.09646299027705527
+      }
+    },
+    "test_auc_ci": [
+      0.9163730435181721,
+      0.9467901396021673
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/graphsage.pt",
+    "notes": "Transductive; train labels only."
+  },
+  "rgcn": {
+    "row": 12,
+    "family": "Deep learning",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "12 standardised profile stats as node features + undirected interaction graph",
+    "hyperparams": {
+      "kind": "rgcn",
+      "hidden": 64,
+      "dropout": 0.3,
+      "lr": 0.01,
+      "epochs_run": 152,
+      "best_epoch": 132,
+      "best_val_loss": 0.296
+    },
+    "train_seconds": 2.1,
+    "threshold": 0.3712939494848252,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.9748960750359077,
+        "pr_auc": 0.9440341845052955,
+        "f1": 0.8664935064935065,
+        "precision": 0.8081395348837209,
+        "recall": 0.9339305711086227,
+        "balanced_accuracy": 0.9203331612019797,
+        "accuracy": 0.9147877984084881,
+        "log_loss": 0.22216935784043204,
+        "brier": 0.06342808913313983
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.9378541726625845,
+        "pr_auc": 0.8686735683128133,
+        "f1": 0.7981651376146789,
+        "precision": 0.7352112676056338,
+        "recall": 0.8729096989966555,
+        "balanced_accuracy": 0.8667219118128677,
+        "accuracy": 0.8643371017471737,
+        "log_loss": 0.2959505758778223,
+        "brier": 0.09294761622665844
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.934065934065934,
+        "pr_auc": 0.8696823087652559,
+        "f1": 0.8028985507246377,
+        "precision": 0.7589041095890411,
+        "recall": 0.8523076923076923,
+        "balanced_accuracy": 0.8620139044628841,
+        "accuracy": 0.8654797230464887,
+        "log_loss": 0.30885869116857156,
+        "brier": 0.0951523992457684
+      }
+    },
+    "test_auc_ci": [
+      0.9180404228813001,
+      0.9490016687771243
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/rgcn.pt",
+    "notes": "Transductive; train labels only. R-GCN uses a single relation type."
+  },
+  "autoencoder_dense": {
+    "row": 13,
+    "family": "Deep learning",
+    "unit": "account",
+    "supervised": false,
+    "score_type": "anomaly",
+    "input_view": "12 standardised profile stats",
+    "hyperparams": {
+      "kind": "dense",
+      "lr": 0.001,
+      "epochs_run": 40,
+      "best_epoch": 40,
+      "best_val_recon_mse": 0.54199
+    },
+    "train_seconds": 0.3,
+    "threshold": 0.09407285764813424,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.535558135474584,
+        "pr_auc": 0.3239878922665191,
+        "f1": 0.4589484589484589,
+        "precision": 0.29851752021563344,
+        "recall": 0.9921612541993281,
+        "balanced_accuracy": 0.5057367740615105,
+        "accuracy": 0.3073607427055703,
+        "log_loss": NaN,
+        "brier": NaN
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.5402429463195816,
+        "pr_auc": 0.3557800307986767,
+        "f1": 0.4677804295942721,
+        "precision": 0.3068893528183716,
+        "recall": 0.9832775919732442,
+        "balanced_accuracy": 0.4990571936127348,
+        "accuracy": 0.31243576567317577,
+        "log_loss": NaN,
+        "brier": NaN
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.5497465799506616,
+        "pr_auc": 0.3597472542992376,
+        "f1": 0.48489425981873113,
+        "precision": 0.3213213213213213,
+        "recall": 0.9876923076923076,
+        "balanced_accuracy": 0.49967705763624126,
+        "accuracy": 0.3254203758654797,
+        "log_loss": NaN,
+        "brier": NaN
+      }
+    },
+    "test_auc_ci": [
+      0.5105224081364289,
+      0.5825076625900896
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/autoencoder_dense.pt",
+    "notes": "Trained without labels on all train accounts; score = reconstruction MSE."
+  },
+  "autoencoder_lstm": {
+    "row": 13,
+    "family": "Deep learning",
+    "unit": "account",
+    "supervised": false,
+    "score_type": "anomaly",
+    "input_view": "168 hourly post counts (log1p, standardised)",
+    "hyperparams": {
+      "kind": "lstm",
+      "lr": 0.001,
+      "epochs_run": 40,
+      "best_epoch": 35,
+      "best_val_recon_mse": 0.92515
+    },
+    "train_seconds": 55.6,
+    "threshold": 1.121670861244202,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.987907728451625,
+        "pr_auc": 0.9663187227719727,
+        "f1": 0.9166666666666666,
+        "precision": 0.8979591836734694,
+        "recall": 0.9361702127659575,
+        "balanced_accuracy": 0.9457111073250419,
+        "accuracy": 0.9496021220159151,
+        "log_loss": NaN,
+        "brier": NaN
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.9872175302442365,
+        "pr_auc": 0.9611527737931316,
+        "f1": 0.9317803660565723,
+        "precision": 0.9271523178807947,
+        "recall": 0.9364548494983278,
+        "balanced_accuracy": 0.9519069499717159,
+        "accuracy": 0.9578622816032888,
+        "log_loss": NaN,
+        "brier": NaN
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.9877999551468939,
+        "pr_auc": 0.9723443316284308,
+        "f1": 0.9069069069069069,
+        "precision": 0.8856304985337243,
+        "recall": 0.9292307692307692,
+        "balanced_accuracy": 0.9361897286387082,
+        "accuracy": 0.9386745796241345,
+        "log_loss": NaN,
+        "brier": NaN
+      }
+    },
+    "test_auc_ci": [
+      0.982850641600873,
+      0.99205906283346
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/autoencoder_lstm.pt",
+    "notes": "Trained without labels on all train accounts; score = reconstruction MSE."
+  },
+  "multimodal_fusion": {
+    "row": 14,
+    "family": "Deep learning",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "text embedding (frozen transformer) + 12 profile stats + interaction graph",
+    "hyperparams": {
+      "hidden": 64,
+      "dropout": 0.3,
+      "lr": 0.01,
+      "epochs_run": 200,
+      "best_epoch": 191,
+      "best_val_loss": 0.0277
+    },
+    "train_seconds": 5.2,
+    "threshold": 0.5972215867042561,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.9999694066848505,
+        "pr_auc": 0.9999272359844922,
+        "f1": 0.9949466591802358,
+        "precision": 0.9977477477477478,
+        "recall": 0.9921612541993281,
+        "balanced_accuracy": 0.9956095955405495,
+        "accuracy": 0.9970159151193634,
+        "log_loss": 0.009879545853318178,
+        "brier": 0.0022897753654807277
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.9993648462233161,
+        "pr_auc": 0.9986185904401491,
+        "f1": 0.9865771812080537,
+        "precision": 0.98989898989899,
+        "recall": 0.9832775919732442,
+        "balanced_accuracy": 0.9894132766987882,
+        "accuracy": 0.9917780061664954,
+        "log_loss": 0.027704628935418148,
+        "brier": 0.006779662554098944
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.9484234133213726,
+        "pr_auc": 0.9109391017323525,
+        "f1": 0.5995717344753747,
+        "precision": 0.9859154929577465,
+        "recall": 0.4307692307692308,
+        "balanced_accuracy": 0.7139268894370936,
+        "accuracy": 0.8150346191889218,
+        "log_loss": 0.7026356707528096,
+        "brier": 0.15261711347908577
+      }
+    },
+    "test_auc_ci": [
+      0.9346476568527486,
+      0.9602832492756432
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/multimodal_fusion.pt",
+    "notes": "Text encoder is frozen from section 7. Simplified stand-in for BIC."
+  },
+  "pca_logreg": {
+    "row": 19,
+    "family": "Unsupervised + classifier",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "12 profile stats",
+    "hyperparams": {
+      "reducer": "pca",
+      "n_components": 6
+    },
+    "train_seconds": 0.0,
+    "threshold": 0.37001991014190866,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.7859122003503464,
+        "pr_auc": 0.6473004958933207,
+        "f1": 0.6145059965733867,
+        "precision": 0.627039627039627,
+        "recall": 0.6024636058230683,
+        "balanced_accuracy": 0.7258667534532205,
+        "accuracy": 0.7761936339522546,
+        "log_loss": 0.5014117699885873,
+        "brier": 0.15910263630892812
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.7782965969651559,
+        "pr_auc": 0.6431299633049087,
+        "f1": 0.6258741258741258,
+        "precision": 0.6556776556776557,
+        "recall": 0.5986622073578596,
+        "balanced_accuracy": 0.7295981659934698,
+        "accuracy": 0.7800616649537513,
+        "log_loss": 0.5185236211875462,
+        "brier": 0.16413884165312412
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.7609957389549227,
+        "pr_auc": 0.6243816426141654,
+        "f1": 0.5817610062893082,
+        "precision": 0.594855305466238,
+        "recall": 0.5692307692307692,
+        "balanced_accuracy": 0.6927786499215071,
+        "accuracy": 0.7368941641938674,
+        "log_loss": 0.5319299985972383,
+        "brier": 0.17580461339266037
+      }
+    },
+    "test_auc_ci": [
+      0.7298017094370083,
+      0.7907924217845379
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/pca_logreg.joblib",
+    "notes": "explained variance of 6 components: 0.62"
+  },
+  "nmf_logreg": {
+    "row": 19,
+    "family": "Unsupervised + classifier",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "12 profile stats",
+    "hyperparams": {
+      "reducer": "nmf",
+      "n_components": 6
+    },
+    "train_seconds": 0.1,
+    "threshold": 0.30410259107860127,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.7757088022769866,
+        "pr_auc": 0.6083723172753808,
+        "f1": 0.582995951417004,
+        "precision": 0.48721804511278194,
+        "recall": 0.7256438969764838,
+        "balanced_accuracy": 0.7022001868302108,
+        "accuracy": 0.6926392572944297,
+        "log_loss": 0.5267064502960387,
+        "brier": 0.1750668112496006
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.7710121770888124,
+        "pr_auc": 0.6126247915464125,
+        "f1": 0.5983827493261455,
+        "precision": 0.5011286681715575,
+        "recall": 0.7424749163879598,
+        "balanced_accuracy": 0.7072908706568879,
+        "accuracy": 0.6937307297019527,
+        "log_loss": 0.5370632809223685,
+        "brier": 0.17933801147245926
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.7723301188607311,
+        "pr_auc": 0.6055479233144666,
+        "f1": 0.607940446650124,
+        "precision": 0.5093555093555093,
+        "recall": 0.7538461538461538,
+        "balanced_accuracy": 0.7049114151154967,
+        "accuracy": 0.6874381800197824,
+        "log_loss": 0.5456229049662111,
+        "brier": 0.18414355827860618
+      }
+    },
+    "test_auc_ci": [
+      0.7436540797773356,
+      0.80215506294917
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/nmf_logreg.joblib",
+    "notes": ""
+  },
+  "svd_logreg": {
+    "row": 19,
+    "family": "Unsupervised + classifier",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "12 profile stats",
+    "hyperparams": {
+      "reducer": "svd",
+      "n_components": 6
+    },
+    "train_seconds": 0.0,
+    "threshold": 0.37001991014189994,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.7859122003503464,
+        "pr_auc": 0.6473004958933207,
+        "f1": 0.6145059965733867,
+        "precision": 0.627039627039627,
+        "recall": 0.6024636058230683,
+        "balanced_accuracy": 0.7258667534532205,
+        "accuracy": 0.7761936339522546,
+        "log_loss": 0.5014117699885865,
+        "brier": 0.15910263630892782
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.7782965969651559,
+        "pr_auc": 0.6431299633049087,
+        "f1": 0.6258741258741258,
+        "precision": 0.6556776556776557,
+        "recall": 0.5986622073578596,
+        "balanced_accuracy": 0.7295981659934698,
+        "accuracy": 0.7800616649537513,
+        "log_loss": 0.518523621187545,
+        "brier": 0.16413884165312378
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.7609957389549227,
+        "pr_auc": 0.6243816426141654,
+        "f1": 0.5817610062893082,
+        "precision": 0.594855305466238,
+        "recall": 0.5692307692307692,
+        "balanced_accuracy": 0.6927786499215071,
+        "accuracy": 0.7368941641938674,
+        "log_loss": 0.5319299985972368,
+        "brier": 0.1758046133926598
+      }
+    },
+    "test_auc_ci": [
+      0.7298017094370083,
+      0.7907924217845379
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/svd_logreg.joblib",
+    "notes": "explained variance of 6 components: 0.62"
+  },
+  "isolation_forest": {
+    "row": 20,
+    "family": "Unsupervised / semi-supervised",
+    "unit": "account",
+    "supervised": false,
+    "score_type": "anomaly",
+    "input_view": "12 profile stats (standardised with train statistics)",
+    "hyperparams": {
+      "n_estimators": 500
+    },
+    "train_seconds": 0.2,
+    "threshold": 0.39961535066936726,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.6243156723751332,
+        "pr_auc": 0.41972589023524914,
+        "f1": 0.4683434518647008,
+        "precision": 0.3156664068589244,
+        "recall": 0.9070548712206047,
+        "balanced_accuracy": 0.5399617267078058,
+        "accuracy": 0.39025198938992045,
+        "log_loss": NaN,
+        "brier": NaN
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.6098964897829561,
+        "pr_auc": 0.41729034551919886,
+        "f1": 0.4831168831168831,
+        "precision": 0.32593457943925236,
+        "recall": 0.9331103678929766,
+        "balanced_accuracy": 0.538513640919782,
+        "accuracy": 0.3864337101747174,
+        "log_loss": NaN,
+        "brier": NaN
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.6384570531509307,
+        "pr_auc": 0.4677048768519293,
+        "f1": 0.5028854080791426,
+        "precision": 0.34346846846846846,
+        "recall": 0.9384615384615385,
+        "balanced_accuracy": 0.5443036555281453,
+        "accuracy": 0.4035608308605341,
+        "log_loss": NaN,
+        "brier": NaN
+      }
+    },
+    "test_auc_ci": [
+      0.6041472942377681,
+      0.6717330940370023
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/isolation_forest.joblib",
+    "notes": "Fitted without labels."
+  },
+  "lof": {
+    "row": 20,
+    "family": "Unsupervised / semi-supervised",
+    "unit": "account",
+    "supervised": false,
+    "score_type": "anomaly",
+    "input_view": "12 profile stats (standardised with train statistics)",
+    "hyperparams": {
+      "n_neighbors": 35,
+      "novelty": true
+    },
+    "train_seconds": 0.1,
+    "threshold": 0.9925317634751234,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.5825447203058909,
+        "pr_auc": 0.3646399577086685,
+        "f1": 0.4661862527716186,
+        "precision": 0.30976058931860034,
+        "recall": 0.9417693169092946,
+        "balanced_accuracy": 0.5295280875643976,
+        "accuracy": 0.3614058355437666,
+        "log_loss": NaN,
+        "brier": NaN
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.5716780961265544,
+        "pr_auc": 0.38877427694955774,
+        "f1": 0.48046550290939316,
+        "precision": 0.3196902654867257,
+        "recall": 0.9665551839464883,
+        "balanced_accuracy": 0.5270461379673095,
+        "accuracy": 0.35765673175745116,
+        "log_loss": NaN,
+        "brier": NaN
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.6008701502579054,
+        "pr_auc": 0.40838592739601115,
+        "f1": 0.49486166007905136,
+        "precision": 0.33297872340425533,
+        "recall": 0.963076923076923,
+        "balanced_accuracy": 0.5245413769903565,
+        "accuracy": 0.36795252225519287,
+        "log_loss": NaN,
+        "brier": NaN
+      }
+    },
+    "test_auc_ci": [
+      0.566646741148838,
+      0.6346238511106556
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/lof.joblib",
+    "notes": "Fitted without labels."
+  },
+  "one_class_svm": {
+    "row": 20,
+    "family": "Unsupervised / semi-supervised",
+    "unit": "account",
+    "supervised": false,
+    "score_type": "anomaly",
+    "input_view": "12 profile stats (standardised with train statistics)",
+    "hyperparams": {
+      "kernel": "rbf",
+      "nu": 0.3,
+      "gamma": "scale"
+    },
+    "train_seconds": 0.1,
+    "threshold": -169.19149102995658,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.580041343173128,
+        "pr_auc": 0.37100202906111446,
+        "f1": 0.45950323974082075,
+        "precision": 0.3027392387050872,
+        "recall": 0.9529675251959686,
+        "balanced_accuracy": 0.5148728346658129,
+        "accuracy": 0.33620689655172414,
+        "log_loss": NaN,
+        "brier": NaN
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.5702093030179729,
+        "pr_auc": 0.38059525804836203,
+        "f1": 0.4745484400656814,
+        "precision": 0.3144722524483134,
+        "recall": 0.9665551839464883,
+        "balanced_accuracy": 0.5159185415281403,
+        "accuracy": 0.34224049331963,
+        "log_loss": NaN,
+        "brier": NaN
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.5916214397847052,
+        "pr_auc": 0.4104659834518588,
+        "f1": 0.4933852140077821,
+        "precision": 0.3302083333333333,
+        "recall": 0.9753846153846154,
+        "balanced_accuracy": 0.5190334155640278,
+        "accuracy": 0.3560830860534125,
+        "log_loss": NaN,
+        "brier": NaN
+      }
+    },
+    "test_auc_ci": [
+      0.5556170580747951,
+      0.6255032156054305
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/one_class_svm.joblib",
+    "notes": "Fitted without labels. nu=0.3 approximates the inauthentic share."
+  },
+  "word2vec_logreg": {
+    "row": 21,
+    "family": "Unsupervised + classifier",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "post text -> mean word2vec vector per account",
+    "hyperparams": {
+      "vector_size": 50,
+      "window": 5,
+      "epochs": 30
+    },
+    "train_seconds": 1.4,
+    "threshold": 0.6540860251473407,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.9938359744682961,
+        "pr_auc": 0.9881721752526501,
+        "f1": 0.9449275362318841,
+        "precision": 0.9795673076923077,
+        "recall": 0.9126539753639418,
+        "balanced_accuracy": 0.9523232194294979,
+        "accuracy": 0.968501326259947,
+        "log_loss": 0.08599689428169946,
+        "brier": 0.022882234133529033
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.9908150809324852,
+        "pr_auc": 0.9847959015363065,
+        "f1": 0.9522184300341296,
+        "precision": 0.9721254355400697,
+        "recall": 0.9331103678929766,
+        "balanced_accuracy": 0.9606204658455981,
+        "accuracy": 0.9712230215827338,
+        "log_loss": 0.10006358345624752,
+        "brier": 0.027136117587319087
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.7221798609553712,
+        "pr_auc": 0.5449370266396096,
+        "f1": 0.15934065934065933,
+        "precision": 0.7435897435897436,
+        "recall": 0.08923076923076922,
+        "balanced_accuracy": 0.5373267548777753,
+        "accuracy": 0.6973293768545994,
+        "log_loss": 1.1848391267541896,
+        "brier": 0.26310232751877
+      }
+    },
+    "test_auc_ci": [
+      0.6877884094462133,
+      0.754860818688599
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/word2vec_logreg.gensim",
+    "notes": ""
+  },
+  "doc2vec_logreg": {
+    "row": 21,
+    "family": "Unsupervised + classifier",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "post text -> doc2vec vector per account (val/test inferred)",
+    "hyperparams": {
+      "vector_size": 50,
+      "window": 5,
+      "epochs": 30
+    },
+    "train_seconds": 2.4,
+    "threshold": 0.5396754989251856,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.9957707379160361,
+        "pr_auc": 0.9914377960307437,
+        "f1": 0.9534090909090909,
+        "precision": 0.9677047289504037,
+        "recall": 0.9395296752519597,
+        "balanced_accuracy": 0.9631703957983775,
+        "accuracy": 0.9728116710875332,
+        "log_loss": 0.07149546335347653,
+        "brier": 0.020105738223637634
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.9908150809324852,
+        "pr_auc": 0.9819581989972904,
+        "f1": 0.9405940594059405,
+        "precision": 0.9283387622149837,
+        "recall": 0.9531772575250836,
+        "balanced_accuracy": 0.9602681539850937,
+        "accuracy": 0.9630010277492291,
+        "log_loss": 0.14045279595000715,
+        "brier": 0.030830092036784926
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.8549988786723481,
+        "pr_auc": 0.7756973344729283,
+        "f1": 0.5655737704918032,
+        "precision": 0.8466257668711656,
+        "recall": 0.4246153846153846,
+        "balanced_accuracy": 0.694086117963669,
+        "accuracy": 0.7903066271018794,
+        "log_loss": 1.0352127910721138,
+        "brier": 0.1821829652202638
+      }
+    },
+    "test_auc_ci": [
+      0.829716995480152,
+      0.8797616136465031
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/doc2vec_logreg.gensim",
+    "notes": ""
+  },
+  "node2vec_logreg": {
+    "row": 21,
+    "family": "Unsupervised + classifier",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "interaction graph -> random-walk embedding per account",
+    "hyperparams": {
+      "dimensions": 32,
+      "walk_length": 20,
+      "num_walks": 10,
+      "p": 0.5,
+      "q": 2.0
+    },
+    "train_seconds": 51.1,
+    "threshold": 0.24518593672604058,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.6204028928616828,
+        "pr_auc": 0.37426564397648077,
+        "f1": 0.4897824653922215,
+        "precision": 0.34703409621672116,
+        "recall": 0.832026875699888,
+        "balanced_accuracy": 0.5867623780289359,
+        "accuracy": 0.48673740053050396,
+        "log_loss": 0.5891893702776582,
+        "brier": 0.2014049867910135
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.60185286265792,
+        "pr_auc": 0.3771484108851393,
+        "f1": 0.5,
+        "precision": 0.35602836879432626,
+        "recall": 0.8394648829431438,
+        "balanced_accuracy": 0.5829371892460526,
+        "accuracy": 0.4840698869475848,
+        "log_loss": 0.6024064850435226,
+        "brier": 0.20733086304892845
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.5905718771024895,
+        "pr_auc": 0.3815243694515148,
+        "f1": 0.4966313763233879,
+        "precision": 0.36134453781512604,
+        "recall": 0.7938461538461539,
+        "balanced_accuracy": 0.5645615608880915,
+        "accuracy": 0.4826904055390702,
+        "log_loss": 0.617728382942877,
+        "brier": 0.2142750310054585
+      }
+    },
+    "test_auc_ci": [
+      0.5555127655100938,
+      0.6274496282023084
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/node2vec_logreg.gensim",
+    "notes": ""
+  },
+  "deepwalk_logreg": {
+    "row": 21,
+    "family": "Unsupervised + classifier",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "probability",
+    "input_view": "interaction graph -> random-walk embedding per account",
+    "hyperparams": {
+      "dimensions": 32,
+      "walk_length": 20,
+      "num_walks": 10,
+      "p": 1.0,
+      "q": 1.0
+    },
+    "train_seconds": 49.3,
+    "threshold": 0.29368171819793165,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.6342621920954258,
+        "pr_auc": 0.38270536637573227,
+        "f1": 0.471976401179941,
+        "precision": 0.3783783783783784,
+        "recall": 0.6270996640537514,
+        "balanced_accuracy": 0.5968753148342238,
+        "accuracy": 0.5845490716180372,
+        "log_loss": 0.5843597470703203,
+        "brier": 0.19968779289879085
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.6301172057203538,
+        "pr_auc": 0.39220229567490783,
+        "f1": 0.5111111111111111,
+        "precision": 0.4050880626223092,
+        "recall": 0.6923076923076923,
+        "balanced_accuracy": 0.6206345583200182,
+        "accuracy": 0.593011305241521,
+        "log_loss": 0.5948211268475658,
+        "brier": 0.20439937403416997
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.6322314420273604,
+        "pr_auc": 0.41729723412893593,
+        "f1": 0.498812351543943,
+        "precision": 0.40618955512572535,
+        "recall": 0.6461538461538462,
+        "balanced_accuracy": 0.5993159901323166,
+        "accuracy": 0.582591493570722,
+        "log_loss": 0.603553788376955,
+        "brier": 0.20867192670835133
+      }
+    },
+    "test_auc_ci": [
+      0.5967350131972047,
+      0.6668237345435527
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/deepwalk_logreg.gensim",
+    "notes": "DeepWalk = node2vec with p = q = 1."
+  },
+  "label_spreading": {
+    "row": 22,
+    "family": "Unsupervised / semi-supervised",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "score",
+    "input_view": "interaction graph + a few known labels",
+    "hyperparams": {
+      "alpha": 0.8,
+      "n_iter": 100,
+      "labeled_frac": 0.2,
+      "n_seeds": 603
+    },
+    "train_seconds": 0.0,
+    "threshold": 0.195251015553615,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.670676149187774,
+        "pr_auc": 0.5499062855033263,
+        "f1": 0.5114678899082569,
+        "precision": 0.34373795761078996,
+        "recall": 0.9988801791713325,
+        "balanced_accuracy": 0.598356716999703,
+        "accuracy": 0.4350132625994695,
+        "log_loss": NaN,
+        "brier": NaN
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.4965314649226402,
+        "pr_auc": 0.3088165660789507,
+        "f1": 0.4741447891805887,
+        "precision": 0.31106471816283926,
+        "recall": 0.9966555183946488,
+        "balanced_accuracy": 0.5087135158738822,
+        "accuracy": 0.32065775950668035,
+        "log_loss": NaN,
+        "brier": NaN
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.49945727741646107,
+        "pr_auc": 0.33518515215606737,
+        "f1": 0.4886535552193646,
+        "precision": 0.3239719157472417,
+        "recall": 0.9938461538461538,
+        "balanced_accuracy": 0.5056694326082081,
+        "accuracy": 0.3313550939663699,
+        "log_loss": NaN,
+        "brier": NaN
+      }
+    },
+    "test_auc_ci": [
+      0.4563297749715938,
+      0.5348014383866073
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/label_spreading.joblib",
+    "notes": "Graph-only. Score is a normalised propagated label mass, not a calibrated probability."
+  },
+  "belief_propagation": {
+    "row": 22,
+    "family": "Unsupervised / semi-supervised",
+    "unit": "account",
+    "supervised": true,
+    "score_type": "score",
+    "input_view": "interaction graph + a few known labels",
+    "hyperparams": {
+      "homophily": 0.1,
+      "damping": 0.5,
+      "n_iter": 30,
+      "seed_strength": 0.9,
+      "labeled_frac": 0.2,
+      "n_seeds": 603
+    },
+    "train_seconds": 0.1,
+    "threshold": 0.0003271080026577992,
+    "metrics": {
+      "train": {
+        "n": 3016,
+        "prevalence": 0.29608753315649866,
+        "roc_auc": 0.29183385298013176,
+        "pr_auc": 0.23536877116869687,
+        "f1": 0.4525096525096525,
+        "precision": 0.29378342245989303,
+        "recall": 0.9843225083986562,
+        "balanced_accuracy": 0.49451641199490043,
+        "accuracy": 0.2947612732095491,
+        "log_loss": NaN,
+        "brier": NaN
+      },
+      "val": {
+        "n": 973,
+        "prevalence": 0.30729701952723537,
+        "roc_auc": 0.12809265305717377,
+        "pr_auc": 0.18361459328177102,
+        "f1": 0.4595879556259905,
+        "precision": 0.3011422637590862,
+        "recall": 0.9698996655518395,
+        "balanced_accuracy": 0.485691672538531,
+        "accuracy": 0.29907502569373073,
+        "log_loss": NaN,
+        "brier": NaN
+      },
+      "test": {
+        "n": 1011,
+        "prevalence": 0.32146389713155293,
+        "roc_auc": 0.09599013231666295,
+        "pr_auc": 0.18928882904687608,
+        "f1": 0.472809667673716,
+        "precision": 0.3133133133133133,
+        "recall": 0.963076923076923,
+        "balanced_accuracy": 0.4815384615384615,
+        "accuracy": 0.3095944609297725,
+        "log_loss": NaN,
+        "brier": NaN
+      }
+    },
+    "test_auc_ci": [
+      0.07690779176200219,
+      0.11575689587459324
+    ],
+    "artifact": "/Users/ananyajogalekar/Library/CloudStorage/GoogleDrive-ananyajogalekar5@gmail.com/My Drive/Duke University/00-Coursework/AIPI590-XAI/Final_Project/github_repo/Explaining_Anonymity/outputs/step1_fit/models/belief_propagation.joblib",
+    "notes": "SybilBelief-style loopy BP on a pairwise MRF; written from scratch. Belief is not calibrated."
+  }
+}

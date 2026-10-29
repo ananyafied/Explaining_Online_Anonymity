@@ -1,0 +1,13 @@
+model,method,correctness_marker_top1,correctness_marker_mass,faithfulness,agreement_spearman,agreement_top3,stability_drop_word,repeatability_seed,shortcut_top1,shortcut_mass,shortcut_model_effect,seconds_per_explanation
+doc2vec_logreg,LIME,1.0,0.8302,0.5266,,,0.7019,0.7337,1.0,0.5617,,0.1844
+doc2vec_logreg,SHAP,1.0,0.8401,0.584,,,0.5471,0.5713,1.0,0.531,,0.1108
+doc2vec_logreg,SHAP vs LIME,,,,0.4098,0.5833,,,,,,
+doc2vec_logreg,model (no explainer),,,,,,,,,,0.8338,
+transformer,LIME,0.9833,0.7241,1.0253,,,0.7156,0.8575,1.0,0.8651,,0.0498
+transformer,SHAP,0.9833,0.5121,1.0233,,,0.9512,0.9624,1.0,0.533,,0.0269
+transformer,SHAP vs LIME,,,,0.4796,0.6426,,,,,,
+transformer,model (no explainer),,,,,,,,,,2.2536,
+word2vec_logreg,LIME,0.9,0.4238,0.7697,,,0.8494,0.8815,1.0,0.774,,0.019
+word2vec_logreg,SHAP,0.9,0.3912,0.8631,,,0.9656,0.9799,1.0,0.5774,,0.0094
+word2vec_logreg,SHAP vs LIME,,,,0.498,0.5444,,,,,,
+word2vec_logreg,model (no explainer),,,,,,,,,,2.4862,

@@ -1,0 +1,34 @@
+{
+  "seed": 0,
+  "quick": false,
+  "n_per_kind": 50,
+  "ig_steps": 64,
+  "gshap_samples": 20,
+  "gshap_baselines": 30,
+  "ks": [
+    5,
+    10,
+    20,
+    40
+  ],
+  "noise_std": 0.05,
+  "z0": -0.34714251384512074,
+  "methods": {
+    "cnn1d": [
+      "Grad-CAM",
+      "Integrated Gradients"
+    ],
+    "rnn": [
+      "Integrated Gradients",
+      "GradientSHAP"
+    ],
+    "lstm": [
+      "Integrated Gradients",
+      "GradientSHAP"
+    ],
+    "autoencoder_lstm": [
+      "Integrated Gradients",
+      "GradientSHAP"
+    ]
+  }
+}

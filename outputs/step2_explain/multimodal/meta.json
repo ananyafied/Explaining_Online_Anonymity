@@ -1,0 +1,13 @@
+{
+  "seed": 0,
+  "noise_frac": 0.05,
+  "ks": [
+    1,
+    2
+  ],
+  "blocks": [
+    "tab",
+    "text",
+    "graph"
+  ]
+}

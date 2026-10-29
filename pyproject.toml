@@ -1,0 +1,16 @@
+[project]
+name = "anonsynth"
+version = "0.1.0"
+description = "Synthetic anonymous-account data with known ground truth for explainability experiments"
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas"]
+
+[project.optional-dependencies]
+dev = ["pytest", "scikit-learn"]
+
+[tool.setuptools]
+packages = ["anonsynth"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

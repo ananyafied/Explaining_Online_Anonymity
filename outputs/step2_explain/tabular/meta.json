@@ -1,0 +1,19 @@
+{
+  "seed": 0,
+  "quick": false,
+  "n_per_kind": 50,
+  "n_background": 100,
+  "shap_nsamples": 1000,
+  "lime_nsamples": 1500,
+  "ks": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "noise_frac": 0.05,
+  "n_random": 5,
+  "libraries": {
+    "shap": "0.49.1"
+  }
+}

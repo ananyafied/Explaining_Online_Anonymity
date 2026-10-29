@@ -1,0 +1,3 @@
+model,r2_predicting_log_degree,auc_predicting_troll_ring_membership
+node2vec_logreg,0.36371586710064663,0.8090581102072859
+deepwalk_logreg,0.452397029675339,0.8230135796489001
